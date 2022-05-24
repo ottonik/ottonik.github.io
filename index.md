@@ -95,7 +95,7 @@
         offerActivation.send({
              loyaltyId: 2400,
               autoActivate: false,
-              rewardId: 97983
+              rewardId: 82281
         });
         offerActivation.on("data", function (data) {
           console.log("offer activation data", loyalityId, data);

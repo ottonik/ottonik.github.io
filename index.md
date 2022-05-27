@@ -41,7 +41,7 @@
         if (intid) clearInterval(intid);
 
         intid = setInterval(() => {
-          getPrize(
+          getPoints(
             mcd.bridge,
             parseInt(document.querySelector(".loyalityId").value)
           );

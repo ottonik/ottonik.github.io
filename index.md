@@ -59,6 +59,8 @@
       document.addEventListener("mcdBridgeReady", function (e) {
         console.log(mcd.bridge);
         let offerActivation = mcd.bridge.message("offerActivation");
+        let Instance = mcd.bridge.message("Instance");
+        let PointsRequest = mcd.bridge.message("PointsRequest");
         let deals = mcd.bridge.message("deals");
         let user = mcd.bridge.message("user");
         user.send({ promptlogin: true });
@@ -88,7 +90,15 @@
         pointValue.on("done", function () {
           console.log("punkty dodane", pointsBalance, loyalityId);
         });
-
+         offers.on("data", function (data) {
+          console.log("offers data", loyalityId, data);
+        });
+        offers.on("error", function (error) {
+          console.warn("offers MCD ERROR", loyalityId, JSON.stringify(error));
+        });
+        offers.on("done", function () {
+          console.log("punkty dodane", loyalityId);
+        });
       }
       <!-- function getPrize(bridge, loyalityId) {
         let couponId =

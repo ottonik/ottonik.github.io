@@ -99,7 +99,6 @@
         offers.on("done", function () {
           console.log("punkty dodane", loyalityId);
         });
-      }
       <!-- function getPrize(bridge, loyalityId) {
         let couponId =
           coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];

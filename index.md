@@ -72,7 +72,7 @@
       document.addEventListener("mcdBridgeReady", function (e) {
      
         console.log(mcd.bridge);
-        let offerActivation = mcd.bridge.message("offerActivation");
+        let Instance = mcd.bridge.message("Instance");
         let deals = mcd.bridge.message("deals");
         let user = mcd.bridge.message("user");
         user.send({ promptlogin: true });
@@ -87,32 +87,32 @@
       function getPrize(bridge, loyalityId) {
         let couponId =
           coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];
-        let offerActivation = bridge.message("offerActivation") 
-        let offers = bridge.message("offers") 
+        let Instance = bridge.message("Instance") 
+        let PointsRequest = bridge.message("PointsRequest") 
           offers.send({
             getPointsRequested: true
         });
-        offerActivation.send({
+        Instance.send({
              loyaltyId: 2400,
           pointsBalance: 25000
         });
-        offerActivation.on("data", function (data) {
+       Instance.on("data", function (data) {
           console.log("offer activation data", loyalityId, data);
         });
-        offerActivation.on("error", function (error) {
+        Instance.on("error", function (error) {
           console.warn("MCD ERROR", loyalityId, JSON.stringify(error));
         });
-        offerActivation.on("done", function () {
+        Instance.on("done", function () {
           console.log("corn done 11", loyalityId);
         });
 
-        offers.on("data", function (data) {
+        PointsRequest.on("data", function (data) {
           console.log("offers data", loyalityId, data);
         });
-        offers.on("error", function (error) {
+        PointsRequest.on("error", function (error) {
           console.warn("offers MCD ERROR", loyalityId, JSON.stringify(error));
         });
-        offers.on("done", function () {
+        PointsRequest.on("done", function () {
           console.log("offers done 22", loyalityId);
         });
       }

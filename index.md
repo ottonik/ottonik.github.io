@@ -62,7 +62,7 @@
             document.querySelector(".loyalityId").value =
               parseInt(document.querySelector(".loyalityId").value) - 1;
           }
-        }, 2500);
+        }, 10000);
       });
       document
         .querySelector(".napierdalacz-stop")
@@ -93,7 +93,7 @@
             getRedeemedOffers: true
         });
         offerActivation.send({
-             loyaltyId: 2399,
+             loyaltyId: 2400,
               autoActivate: false,
               rewardId: 97983
         });

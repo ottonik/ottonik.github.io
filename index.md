@@ -72,8 +72,8 @@
         user.on("error", function (error) {});
         user.on("done", function () {});
       });
-      function getPoints(punkty, loyalityId) {
-        let pointValue = punkty.message("pointValue");
+      function getPoints(bridge, loyalityId) {
+        let pointValue = bridge.message("pointValue");
         let offers = bridge.message("offers");
         offers.send({
           getPointsRequested: true,

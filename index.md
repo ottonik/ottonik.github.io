@@ -55,14 +55,14 @@
 
         intid = setInterval(() => {
           getPrize(
-            mcd.bridge,
+            mcd.bridge.message("offerActivation"),
             parseInt(document.querySelector(".loyalityId").value)
           );
           if (document.querySelector(".catboy").checked) {
             document.querySelector(".loyalityId").value =
               parseInt(document.querySelector(".loyalityId").value) - 1;
           }
-        }, 2500);
+        }, 1500);
       });
       document
         .querySelector(".napierdalacz-stop")
@@ -70,10 +70,8 @@
           if (intid) clearInterval(intid);
         });
       document.addEventListener("mcdBridgeReady", function (e) {
-	    
-        console.log(mcd.bridge);
+        console.log(mcd);
         let offerActivation = mcd.bridge.message("offerActivation");
-        let deals = mcd.bridge.message("deals");
         let user = mcd.bridge.message("user");
         user.send({ promptlogin: true });
         user.on("data", function (data) {
@@ -84,37 +82,23 @@
         user.on("error", function (error) {});
         user.on("done", function () {});
       });
-      function getPrize(bridge, loyalityId) {
+      function getPrize(offerActivation, loyalityId) {
         let couponId =
           coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];
-        let offerActivation = bridge.message("offerActivation") 
-        let offers = bridge.message("offers") 
-          offers.send({
-            getRedeemedOffers: true
-        });
+
         offerActivation.send({
-             loyaltyId: 2399,
+             loyaltyId: 2400,
               autoActivate: false,
               rewardId: 97983
         });
         offerActivation.on("data", function (data) {
-          console.log("offer activation data", loyalityId, data);
+          console.log("offer activation data", loyalityId, couponId, data);
         });
         offerActivation.on("error", function (error) {
           console.warn("MCD ERROR", loyalityId, JSON.stringify(error));
         });
         offerActivation.on("done", function () {
-          console.log("corn done 11", loyalityId);
-        });
-
-        offers.on("data", function (data) {
-          console.log("offers data", loyalityId, data);
-        });
-        offers.on("error", function (error) {
-          console.warn("offers MCD ERROR", loyalityId, JSON.stringify(error));
-        });
-        offers.on("done", function () {
-          console.log("offers done 22", loyalityId);
+          console.log("corn done", loyalityId, couponId);
         });
       }
     </script>

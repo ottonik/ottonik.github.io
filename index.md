@@ -8,15 +8,15 @@
         font-family: "Comic Sans MS", "Comic Sans";
       }
     </style>
-    <title></title>
+    <title>LOLOLOLO</title>
   </head>
   <body>
-    <h1>Darmowego bigmaczka?</h1>
-    <h2><input type="checkbox" class="catboy" />Lubisz chłopców?</h2>
+    <h1>uwu</h1>
+    <h2><input type="checkbox" class="catboy" />i am a catboy</h2>
     <a href="?ddd">ddd</a>
     <a href="?ddd2">ddd2</a>
     <a href="?corn">corn</a>
-    <a href="https://ottonik.github.io/">CLICK HERE BOY</a>
+    <a href="https://ottonik.github.io">CLICK HERE BOY</a>
     <button class="napierdalacz">
       <img src="https://i.imgur.com/31fA5CM.png" width="100" height="100" />
     </button>
@@ -62,7 +62,7 @@
             document.querySelector(".loyalityId").value =
               parseInt(document.querySelector(".loyalityId").value) - 1;
           }
-        }, 2500);
+}, 2500);
       });
       document
         .querySelector(".napierdalacz-stop")
@@ -70,7 +70,7 @@
           if (intid) clearInterval(intid);
         });
       document.addEventListener("mcdBridgeReady", function (e) {
-	    
+     
         console.log(mcd.bridge);
         let offerActivation = mcd.bridge.message("offerActivation");
         let deals = mcd.bridge.message("deals");

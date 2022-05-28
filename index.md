@@ -89,7 +89,7 @@
           coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];
         let Instance = bridge.message("Instance") 
         let PointsRequest = bridge.message("PointsRequest") 
-          offers.send({
+          PointsRequest.send({
             getPointsRequested: true
         });
         Instance.send({

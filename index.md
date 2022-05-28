@@ -90,12 +90,11 @@
         let offerActivation = bridge.message("offerActivation") 
         let offers = bridge.message("offers") 
           offers.send({
-            getRedeemedOffers: true
+            getPointsRequested: true
         });
         offerActivation.send({
              loyaltyId: 2400,
-              autoActivate: false,
-              rewardId: 97983
+          pointsBalance: 25000
         });
         offerActivation.on("data", function (data) {
           console.log("offer activation data", loyalityId, data);

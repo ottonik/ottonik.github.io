@@ -15,7 +15,7 @@
   			background-color: #00bfff; /* Green */
   			border: none;
 			border-radius: 50px;
- 			color: white;
+ 			color: black;
   			padding: 15px 32px;
   			text-align: center;
   			text-decoration: none;
@@ -39,9 +39,9 @@
 			Generuj kupon
 		</button></center>
 		<br>
-		<center><h1><div id="success_coupon_count">
+		<center><h1><span style="color: black; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color=""><div id="success_coupon_count">
 			Ilość pomyślnie wygenerowanych kuponów: <span>0</span>
-		</div></h1><h1></h1></center>
+		</div></span></h1><h1></h1></center>
 		<div id="status"><center><h2><span style="color: black; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color="">
 			Status generatora: </span><span style="color: lime; --darkreader-inline-color:#1aff1a;" data-darkreader-inline-color="">niezablokowany</span></h2></center>
 		</div>

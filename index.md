@@ -39,7 +39,7 @@
 			Generuj kupon
 		</button></center>
 		<br>
-		<center><h1><span style="color: white; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color=""><div id="success_coupon_count">
+		<center><h1><span style="color: black; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color=""><div id="success_coupon_count">
 			Ilość pomyślnie wygenerowanych kuponów: <span>0</span>
 		</div></span></h1><h1></h1></center>
 		<div id="status"><center><h2><span style="color: white; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color="">
@@ -57,7 +57,7 @@
     btn.style.backgroundColor = '#00bfff';
     btn.style.color = 'white';
     document.getElementById("generate_coupon").disabled = false;
-  }, 60000);
+  }, 6000);
 });
 
 function data_handler(ev) {
@@ -71,7 +71,7 @@ function data_handler(ev) {
   };
   const iCount = parseInt(count.innerText) + 1;
   count.innerText = iCount;
-  return cooldown_button(button, 60);
+  return cooldown_button(button, 6);
 };
 
 function click_handler() {

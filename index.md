@@ -42,7 +42,7 @@
 		<center><h1><div id="success_coupon_count">
 			Ilość pomyślnie wygenerowanych kuponów: <span>0</span>
 		</div></h1><h1></h1></center>
-		<div id="status"><center><h2><span style="color: white; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color="">
+		<div id="status"><center><h2><span style="color: black; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color="">
 			Status generatora: </span><span style="color: lime; --darkreader-inline-color:#1aff1a;" data-darkreader-inline-color="">niezablokowany</span></h2></center>
 		</div>
 	</div>

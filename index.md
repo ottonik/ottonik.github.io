@@ -79,7 +79,7 @@ function click_handler() {
   request.send({
     loyaltyId: 2400,
     autoActivate: false,
-    rewardId: 97983
+    rewardId: 00001
   });
   request.on("data", data_handler)
 };

@@ -82,7 +82,7 @@
                 console.log(JSON.stringify(data));
                 console.log(mcd.bridge);
                 console.log(data);
-                cconsole.log(user);
+                console.log(user);
                 console.log(deals);
                 console.log(JSON.stringify(user));
                 console.log(JSON.stringify(deals));

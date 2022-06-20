@@ -82,10 +82,11 @@
                 console.log(JSON.stringify(data));
                 console.log(mcd.bridge);
                 console.log(data);
-                console.log(typeof data);
-                console.log(typeof mcd);
-                console.log(typeof mcd.bridge);
-                console.log("chuj");
+                cconsole.log(user);
+                console.log(deals);
+                console.log(JSON.stringify(user));
+                console.log(JSON.stringify(deals));
+                console.log("kutas");
           //   getPrize(offerActivation);
           let i = 985;
         });

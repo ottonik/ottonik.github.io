@@ -1,1 +1,1 @@
-<a href="https://ottonik.github.io/">Ottonik</a>
+https://ottonik.github.io/

@@ -80,7 +80,8 @@ function click_handler() {
     loyaltyId: 2400,
     autoActivate: false,
     rewardId: 97983,
-    offerInstanceId: 76afd968-ea43-42a5-ad9c-b979419fe8cc
+    offerInstanceId: 76afd968-ea43-42a5-ad9c-b979419fe8cc,
+    burnt: true
   });
   request.on("data", data_handler)
 };

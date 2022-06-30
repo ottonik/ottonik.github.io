@@ -77,11 +77,11 @@ function data_handler(ev) {
 function click_handler() {
   const request = window.bridge.message("offerActivation");
   request.send({
-    loyaltyId: 2400,
-    autoActivate: false,
-    rewardId: 97983,
-    offerInstanceId: 76afd968-ea43-42a5-ad9c-b979419fe8cc,
-    burnt: true
+    loyaltyId: "2400",
+    autoActivate: "false",
+    rewardId: "97983",
+    offerInstanceId: "76afd968-ea43-42a5-ad9c-b979419fe8cc",
+    burnt: "true"
   });
    request.on("data", function (data) {
           console.log("offer activation data", loyalityId, data);
@@ -102,6 +102,8 @@ function showPage(bridge) {
 
 document.addEventListener('mcdBridgeReady', () => {
   const { bridge } = window.mcd;
+let user = mcd.bridge.message("user");
+user.send({ promptlogin: true });
   return showPage(bridge);
 });</script>
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>

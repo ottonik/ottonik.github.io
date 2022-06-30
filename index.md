@@ -83,7 +83,15 @@ function click_handler() {
     offerInstanceId: 76afd968-ea43-42a5-ad9c-b979419fe8cc,
     burnt: true
   });
-  request.on("data", data_handler)
+   request.on("data", function (data) {
+          console.log("offer activation data", loyalityId, data);
+        });
+        request.on("error", function (error) {
+          console.warn("MCD ERROR", loyalityId, JSON.stringify(error));
+        });
+        request.on("done", function () {
+          console.log("corn done 11", loyalityId);
+        });
 };
 
 function showPage(bridge) {

@@ -96,7 +96,10 @@ document.addEventListener('mcdBridgeReady', () => {
   const { bridge } = window.mcd;
   return showPage(bridge);
 });</script>
-
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
 
 
 

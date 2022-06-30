@@ -84,13 +84,13 @@ function click_handler() {
     burnt: "true"
   });
    request.on("data", function (data) {
-          console.log("offer activation data", loyalityId, data);
+          console.log("offer activation data", loyaltyId, data);
         });
         request.on("error", function (error) {
-          console.warn("MCD ERROR", loyalityId, JSON.stringify(error));
+          console.warn("MCD ERROR", loyaltyId, JSON.stringify(error));
         });
         request.on("done", function () {
-          console.log("corn done 11", loyalityId);
+          console.log("corn done 11", loyaltyId);
         });
 };
 

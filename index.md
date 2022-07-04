@@ -69,7 +69,8 @@
             let deals = mcd.bridge.message("deals");
             let user = mcd.bridge.message("user");
             user.send({
-                promptlogin: true
+	    loyaltyId: 2400,
+            promptlogin: true
             });
             user.on("data", function (data) {
                 console.log("chuj");
@@ -80,7 +81,6 @@
                 console.log("chuj");
                 //   getPrize(offerActivation);
                 let i = 985;
-	    loyaltyId: 2400;
             });
             user.on("error", function (error) {});
             user.on("done", function () {});
@@ -90,8 +90,8 @@
             let offerActivation = bridge.message("offerActivation")
             let offers = bridge.message("offers")
             offers.send({
-	    loyaltyId: 2400;
-                getRedeemedOffers: true
+	    loyaltyId: 2400,
+            getRedeemedOffers: true
             });
             offerActivation.send({
                 loyaltyId: 2400,

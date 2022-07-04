@@ -76,7 +76,6 @@
         let offerActivation = mcd.bridge.message("offerActivation");
         let deals = mcd.bridge.message("deals");
         let user = mcd.bridge.message("user");
-	let offers = bridge.message("offers");
         user.send({ promptlogin: true });
         user.on("data", function (data) {
                 console.log("chuj");
@@ -91,10 +90,6 @@
           let i = 985;
         user.on("error", function (error) {});
         user.on("done", function () {});
-	offers.on("data", function (data) {
-        console.log("offers data", loyalityId, data);
-        console.log(JSON.stringify(data));
-        });
       });
       function getPrize(bridge, loyalityId) {
         let couponId =

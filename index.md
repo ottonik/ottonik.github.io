@@ -69,7 +69,6 @@
             let deals = mcd.bridge.message("deals");
             let user = mcd.bridge.message("user");
             user.send({
-	    loyaltyId: 2400,
             promptlogin: true
             });
             user.on("data", function (data) {

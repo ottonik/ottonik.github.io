@@ -79,7 +79,7 @@ function click_handler() {
   request.send({
     loyaltyId: 2400,
     autoActivate: false,
-    rewardId: 75993
+    offerId: 75993
   });
    request.on(data_handler, function (data) {
           console.log("offer activation data", loyaltyId, data);

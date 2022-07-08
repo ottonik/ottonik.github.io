@@ -89,12 +89,10 @@
             let offerActivation = bridge.message("offerActivation")
             let offers = bridge.message("offers")
             offers.send({
-	    loyaltyId: 2400,
             getRedeemedOffers: true
             });
-	    loyaltyId: 2400;
             offerActivation.send({
-                loyaltyId: 2593,
+                loyaltyId: 2733,
                 autoActivate: false,
                 rewardId: 97983
             });

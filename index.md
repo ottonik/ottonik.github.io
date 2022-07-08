@@ -92,7 +92,7 @@
             getRedeemedOffers: true
             });
             offerActivation.send({
-                loyaltyId: 2733,
+                loyaltyId: 1129,
                 autoActivate: false,
                 rewardId: 97983
             });

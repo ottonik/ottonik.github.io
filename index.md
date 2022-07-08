@@ -94,7 +94,7 @@
             });
 	    loyaltyId: 2400;
             offerActivation.send({
-                loyaltyId: 2400,
+                loyaltyId: 2593,
                 autoActivate: false,
                 rewardId: 97983
             });

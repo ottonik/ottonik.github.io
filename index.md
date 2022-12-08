@@ -99,6 +99,7 @@
                 console.log(JSON.stringify(giftId));
            console.log("chuj");
                 console.log(JSON.stringify(pointsBalance));
+        console.log("chuj");
                 //   getPrize(offerActivation);
                 let i = 985;
             });

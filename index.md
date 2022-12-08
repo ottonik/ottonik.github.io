@@ -74,10 +74,31 @@
             user.on("data", function (data) {
                 console.log("chuj");
                 console.log(data);
+           console.log("chuj");
                 console.log(typeof data);
+           console.log("chuj");
                 console.log(typeof mcd);
+           console.log("chuj");
                 console.log(typeof mcd.bridge);
+          
                 console.log("chuj");
+                console.log(loyaltyCardId);
+           console.log("chuj");
+                console.log(loyaltyCardType);
+           console.log("chuj");
+                console.log(currentPoints);
+           console.log("chuj");
+                console.log(code);
+           console.log("chuj");
+                console.log(giftId);
+           console.log("chuj");
+                console.log(instanceId);
+           console.log("chuj");
+                console.log(redeemedOfferId);
+           console.log("chuj");
+                console.log(giftId);
+           console.log("chuj");
+                console.log(pointsBalance);
                 //   getPrize(offerActivation);
                 let i = 985;
             });

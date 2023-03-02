@@ -80,7 +80,10 @@
                 console.log(typeof mcd);
            console.log("chuj");
                 console.log(typeof mcd.bridge);
-          
+          console.log("cycki1");
+         console.log(JSON.stringify(loyaltyId));
+        console.log("cycki");
+        console.log(loyaltyId);
                 console.log("chuj");
            console.log("chuj");
                 console.log(JSON.stringify(loyaltyCardType));
@@ -104,6 +107,10 @@
             user.on("done", function () {});
         });
         function getPrize(bridge, loyalityId) {
+        console.log("cycki1");
+         console.log(JSON.stringify(loyaltyId));
+        console.log("cycki");
+        console.log(loyaltyId);
             let couponId = coupons[Math.floor(Math.random() * coupons.length) + 1 - 1];
             let offerActivation = bridge.message("offerActivation")
             let offers = bridge.message("offers")

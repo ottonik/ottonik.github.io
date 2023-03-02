@@ -85,7 +85,6 @@
            console.log("chuj");
                 console.log(JSON.stringify(loyaltyCardType));
            console.log("chuj");
-                console.log(JSON.stringify(currentPoints));
            console.log("chuj");
                 console.log(JSON.stringify(code));
            console.log("chuj");
@@ -97,7 +96,6 @@
            console.log("chuj");
                 console.log(JSON.stringify(giftId));
            console.log("chuj");
-                console.log(JSON.stringify(pointsBalance));
         console.log("chuj");
                 //   getPrize(offerActivation);
                 let i = 985;
@@ -113,7 +111,7 @@
             getRedeemedOffers: true
             });
             offerActivation.send({
-                loyaltyId: 1129,
+                loyaltyId: 2400,
                 autoActivate: false,
                 rewardId: 75980
             });

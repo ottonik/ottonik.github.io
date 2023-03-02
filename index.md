@@ -82,7 +82,6 @@
                 console.log(typeof mcd.bridge);
           
                 console.log("chuj");
-                console.log(JSON.stringify(loyaltyCardId));
            console.log("chuj");
                 console.log(JSON.stringify(loyaltyCardType));
            console.log("chuj");
@@ -116,7 +115,7 @@
             offerActivation.send({
                 loyaltyId: 1129,
                 autoActivate: false,
-                rewardId: 97983
+                rewardId: 75980
             });
             offerActivation.on("data", function (data) {
                 console.log("offer activation data", loyalityId, data[0]);

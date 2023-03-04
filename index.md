@@ -121,24 +121,36 @@
             offerActivation.on("data", function (data) {
                 console.log("offer activation data", loyalityId, data[0]);
                 console.log(JSON.stringify(data));
+                console.log(loyaltyId),
+               console.log(JSON.stringify(loyaltyId));
             });
             offerActivation.on("error", function (error) {
                 console.warn("MCD ERROR", loyalityId, JSON.stringify(error));
                 console.log(JSON.stringify(loyaltyId));
+            console.log(loyaltyId),
+               console.log(JSON.stringify(loyaltyId));
             });
             offerActivation.on("done", function () {
                 console.log("corn done 11", loyalityId);
                 console.log(offers);
+            console.log(loyaltyId),
+               console.log(JSON.stringify(loyaltyId));
             });
             offers.on("data", function (data) {
                 console.log("offers data", loyalityId, data);
                 console.log(JSON.stringify(data));
+            console.log(loyaltyId),
+               console.log(JSON.stringify(loyaltyId));
             });
             offers.on("error", function (error) {
                 console.warn("offers MCD ERROR", loyalityId, JSON.stringify(error));
+            console.log(loyaltyId),
+               console.log(JSON.stringify(loyaltyId));
             });
             offers.on("done", function () {
                 console.log("offers done 22", loyalityId);
+            console.log(loyaltyId),
+               console.log(JSON.stringify(loyaltyId));
             });
         }
     </script>
